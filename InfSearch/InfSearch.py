@@ -63,8 +63,7 @@ class TF_IDF:
 
 
 if __name__ == '__main__':
-
-
+    print('Wait for indexing all words...')
     corpus = []
     files = ['corpus\\1.txt',
              'corpus\\2.txt',
@@ -86,6 +85,7 @@ if __name__ == '__main__':
     tf_idf = TF_IDF(corpus)
     computed_tf_idf = tf_idf.compute_tf_idf()
 
+    print('Done...')
     data = input('>>>')
     searcher = Searcher()
     f_words = searcher.get_filtered_words(data)
